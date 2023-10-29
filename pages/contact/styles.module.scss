@@ -1,0 +1,15 @@
+.contact {
+  @apply flex items-center justify-end mt-auto mb-2;
+  
+  .link {
+    @apply flex items-center gap-x-3 mr-2;
+
+    a {
+      @apply w-8 h-8 flex justify-center items-center;
+
+      > svg {
+        @apply w-5 h-5;
+      }
+    }
+  }
+}

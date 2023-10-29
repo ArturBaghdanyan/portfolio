@@ -1,0 +1,6 @@
+.row {
+	@apply w-full h-64 flex flex-col justify-center items-center text-xl lg:text-2xl;
+	p {
+		@apply flex items-center;
+	}
+}
