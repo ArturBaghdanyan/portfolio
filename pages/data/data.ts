@@ -3,18 +3,22 @@ import { v4 as uuidv4 } from 'uuid';
 export const projectsList = [
     {
         id: uuidv4(),
+        key: 'property',
         text: 'Property Fraud'
     },
     {
         id: uuidv4(),
-        text: 'Binance'
+        key: 'trello',
+        text: 'Trello'
     },
     {
         id: uuidv4(),
-        text: 'trello'
+        key: 'Kiwi',
+        text: 'Kiwi'
     },
     {
         id: uuidv4(),
-        text: 'NK-Task'
+        key: 'vue_crud',
+        text: 'Vue_Crud'
     }
 ]

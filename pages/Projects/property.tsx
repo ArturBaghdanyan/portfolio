@@ -4,10 +4,10 @@ import Link from 'next/link';
 
 export const PropertyProject = () => {
   return (
-		<div className={styles.projects_fraud}>
+		<div className={styles.information}>
 			<h1 className='text-2xl'>Property Fraud</h1>
 			<div className='border-l-2'>
-				<p className={styles.text}>
+				<p className={styles.information_text}>
 					Collaborated with a team of developers to create a property-fraud
 					application using React with TypeScript and Tailwind CSS.
 					Implemented responsive design principles to ensure the application

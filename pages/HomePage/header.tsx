@@ -1,7 +1,10 @@
-import Link from 'next/link';
 import styles from "./styles.module.scss";
 import Code from 'next/image';
 import { Dispatch, FC, SetStateAction, useEffect, useRef } from 'react';
+import WhoAmI from "../Article";
+import ProjectsList from "../Projects";
+import AboutPage from "../AboutPage";
+import Contact from "../Contact";
 
 type HeaderProps = {
   isHeaderFixed: boolean;
@@ -26,20 +29,16 @@ const Header:FC<HeaderProps> = ({ isHeaderFixed, setIsHeaderFixed }) => {
     }
   };
   
-  // const myRef = useRef<HTMLDivElement | null>(null);
-  // const projectsRef = useRef<HTMLDivElement | null>(null);
-  // const aboutRef = useRef<HTMLDivElement | null>(null);
-  // const contactRef = useRef<HTMLDivElement | null>(null);
+  const myRef = useRef<HTMLDivElement | null>(null);
+  const projectsRef = useRef<HTMLDivElement | null>(null);
+  const aboutRef = useRef<HTMLDivElement | null>(null);
+  const contactRef = useRef<HTMLDivElement | null>(null);
 
-  // const executeScroll = (targetRef: React.RefObject<HTMLDivElement | null>) => {
-  //   if (targetRef.current) {
-  //     targetRef.current.scrollIntoView({ behavior: 'smooth' });
-  //   }
-  // }
-
-  // function NavLink({ onClick, children }: any) {
-  //   return <div onClick={onClick}>{children}</div>;
-  // }
+  const executeScroll = (targetRef: React.RefObject<HTMLDivElement | null>) => {
+    if (targetRef.current) {
+      targetRef.current.scrollIntoView();
+    }
+  }
 
   return (
   <header className={`${styles.root} ${isHeaderFixed ? styles.sticky : ''}`}>
@@ -56,26 +55,27 @@ const Header:FC<HeaderProps> = ({ isHeaderFixed, setIsHeaderFixed }) => {
           <p>Front End developer</p>
         </div>
       </div>
+      <ul className={styles.header_contact}>
+        <li onClick={() => executeScroll(myRef)}>Home</li>
+        <li onClick={() => executeScroll(aboutRef)}>About</li>
+        <li onClick={() => executeScroll(projectsRef)}>Projects</li>
+        <li onClick={() => executeScroll(contactRef)}>Contact</li>
+      </ul>
     </div>
-    {/* <WhoAmI /> */}
-{/* 
-    <div className={styles.header_contact}>
-      <NavLink onClick={() => executeScroll(myRef)}>Home</NavLink>
-      <NavLink onClick={() => executeScroll(aboutRef)}>About</NavLink>
-      <NavLink onClick={() => executeScroll(projectsRef)}>Projects</NavLink>
-      <NavLink onClick={() => executeScroll(contactRef)}>Contact</NavLink>
-    </div>
-    <div ref={aboutRef}><About /></div>
+    <WhoAmI />
+  </div>
+  <div className="flex flex-col mt-24 relative">
+    <div ref={aboutRef}><AboutPage /></div>
     <div ref={projectsRef}><ProjectsList /></div>
-    <div ref={contactRef}><Contact /></div> */}
+    <div ref={contactRef}><Contact /></div>
+  </div>
 
-    <nav className={styles.header_contact}>
+    {/* <nav className={styles.header_contact}>
       <Link href='/'>Home</Link>
       <Link href='/AboutPage'>About</Link>
       <Link href='/Projects'>Projects</Link>
       <Link href='/Contact'>Contact</Link>
-    </nav>
-  </div>
+    </nav> */}
 </header>
 );
 }

@@ -38,9 +38,6 @@ const About = () => {
           way to stay active and competitive.
         </p>
       </div>
-      <p className='text-red-500'>
-        <Link href="/">Come back initial page</Link>
-      </p>
     </div>
   )
 }

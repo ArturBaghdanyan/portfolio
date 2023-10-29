@@ -13,11 +13,11 @@
 			}
 		}
 
-		.projects_fraud {
+		.information {
 			@apply w-3/5 h-auto flex flex-col justify-center gap-y-4 items-start 
 						 md:w-4/5 sm:w-4/5;
 
-			.text {
+			.information_text {
 				@apply w-3/5 flex text-gray-400 pl-4;
 			}
 			a {

@@ -19,14 +19,14 @@ export default function Home() {
   };
 
   return (
-    <div className="flex flex-col gap-y-8">
+    <div className="flex flex-col">
       <div 
         className="bg-center bg-no-repeat bg-cover w-full px-6"
         style={divStyle}>
         <Header isHeaderFixed={isHeaderFixed} setIsHeaderFixed={setIsHeaderFixed} />
-        <WhoAmI />
+        {/* <WhoAmI /> */}
       </div>
-      <Contact />
+      {/* <Contact /> */}
       {/* <About />
       <ProjectsList />
       <Contact /> */}

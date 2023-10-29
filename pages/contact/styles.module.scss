@@ -1,5 +1,5 @@
 .contact {
-  @apply flex items-center justify-end mt-auto mb-2;
+  @apply flex items-center fixed bottom-0 right-2;
   
   .link {
     @apply flex items-center gap-x-3 mr-2;

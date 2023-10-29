@@ -1,11 +1,14 @@
 .root {
-  @apply text-white grow relative inset-x-0 z-20 px-4;
+  @apply text-white inset-x-0 z-20 px-4;
 
   .header_container {
-    @apply flex justify-between md:items-center;
+    @apply flex flex-col;
     
-  .header_name >.logo {
-    @apply flex flex-col items-center md:flex-row md:gap-x-3;
+  .header_name {
+    @apply flex items-center justify-between;
+
+  .logo {
+    @apply flex items-center md:flex-row md:gap-x-3;
 
     img {
       @apply w-10 h-10 bg-white;
@@ -21,6 +24,7 @@
     Link {
       @apply grow;
     }
+  }
   }
 }
 }
