@@ -1,5 +1,5 @@
 .root {
-  @apply text-white inset-x-0 z-20 px-4;
+  @apply text-[#E6E6FA] inset-x-0 z-20 px-4 absolute;
 
   .header_container {
     @apply flex flex-col;
@@ -8,26 +8,34 @@
     @apply flex items-center justify-between;
 
   .logo {
-    @apply flex items-center md:flex-row md:gap-x-3;
+    @apply flex flex-col items-start md:items-center md:flex-row md:gap-x-3;
 
-    img {
-      @apply w-10 h-10 bg-white;
+    svg {
+      @apply w-10 h-10;
     }
 
     .logo_name {
       @apply flex-col;
     }
-  }
-  .header_contact {
-    @apply flex flex-col gap-y-3 uppercase md:flex-row md:gap-x-3;
 
+    .scroll_name {
+      @apply text-green-500;
+    }
+  }
+  
+  .header_contact {
+    @apply flex flex-col gap-y-3 uppercase underline cursor-pointer 
+           md:flex-row md:gap-x-3;
+    :hover {
+      @apply text-orange-500;
+    }
     Link {
       @apply grow;
     }
   }
   }
 }
+.root_components {
+  @apply flex flex-col mt-16 relative cursor-pointer md:mt-32;
 }
-.sticky {
-  @apply fixed shadow-lg bg-gray-400 text-black;
- }
+}

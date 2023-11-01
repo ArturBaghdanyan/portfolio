@@ -13,8 +13,8 @@ export const projectsList = [
     },
     {
         id: uuidv4(),
-        key: 'Kiwi',
-        text: 'Kiwi'
+        key: 'binance',
+        text: 'Binance'
     },
     {
         id: uuidv4(),

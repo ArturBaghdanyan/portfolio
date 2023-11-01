@@ -1,15 +1,7 @@
-import { useState } from "react";
-// import Contact from "./Contact";
 import Header from "./HomePage/header";
-// import About from "./AboutPage";
-import bgImage from '../public/backgroundImage.png';
-import WhoAmI from "./Article";
-import Contact from "./Contact";
-// import ProjectsList from "./Projects";
+import bgImage from '../public/backgroundImage.jpg';
 
-
-export default function Home() {
-  const [isHeaderFixed, setIsHeaderFixed] = useState<boolean>(false);
+export default function Home() {  
 
   const divStyle = {
     backgroundImage: `url(${bgImage.src})`,
@@ -19,17 +11,12 @@ export default function Home() {
   };
 
   return (
-    <div className="flex flex-col">
+    <div className="flex flex-col h-screen">
       <div 
-        className="bg-center bg-no-repeat bg-cover w-full px-6"
+        className="bg-center bg-no-repeat bg-fixed bg-cover px-6" 
         style={divStyle}>
-        <Header isHeaderFixed={isHeaderFixed} setIsHeaderFixed={setIsHeaderFixed} />
-        {/* <WhoAmI /> */}
+        <Header />
       </div>
-      {/* <Contact /> */}
-      {/* <About />
-      <ProjectsList />
-      <Contact /> */}
     </div>
   )
 }

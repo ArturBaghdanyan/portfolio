@@ -4,13 +4,13 @@ import { projectsList } from "../data/data";
 import { projectsListType } from "../types/projectsList";
 import { PropertyProject } from "./property";
 import { TrelloProject } from './trello';
-import { KiwiProject } from './kiwi';
+import { BinanceProject } from './binance';
 import { VueCrudProject } from './vue_crud';
 
-const ProjectsList= () => {
+const ProjectsList = () => {
   const [isOpenProperty, setIsOpenProperty] = useState(false);
   const [isOpenTrello, setIsOpenTrello] = useState(false);
-  const [isOpenKiwi, setIsOpenKiwi] = useState(false);
+  const [isOpenBinance, setIsOpenBinance] = useState(false);
   const [isOpenVue, setIsOpenVue] = useState(false);
   
   const onCardAction = (key: string) => {
@@ -21,8 +21,8 @@ const ProjectsList= () => {
       case 'trello':
         setIsOpenTrello(!isOpenTrello);
         break;
-      case 'kiwi':
-        setIsOpenKiwi(!isOpenKiwi);
+      case 'binance':
+        setIsOpenBinance(!isOpenBinance);
         break;
       case 'vue_crud':
         setIsOpenVue(!isOpenVue);
@@ -32,15 +32,9 @@ const ProjectsList= () => {
     }
   };
 
-
   return (
     <div className={styles.container}>
       <div className={styles.projects}>
-        {isOpenProperty && <PropertyProject />}
-        {isOpenTrello && <TrelloProject />}
-        {isOpenKiwi && <KiwiProject />}
-        {isOpenVue && <VueCrudProject />}
-
         <div className={styles.projects_list}>
           <h1 className='text-2xl'>Projects</h1>
           <div className={styles.projects_list_names}>
@@ -55,10 +49,10 @@ const ProjectsList= () => {
           </div>
         </div>
       </div>
-        <br />
-      {/* <div className='text-red-500 fixed bottom-2 right-2'>
-        <Link href="/">Come back initial page</Link>
-      </div> */}
+      {isOpenProperty && <PropertyProject />}
+      {isOpenTrello && <TrelloProject />}
+      {isOpenBinance && <BinanceProject />}
+      {isOpenVue && <VueCrudProject />}
     </div>
   )
 }

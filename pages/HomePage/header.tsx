@@ -1,34 +1,13 @@
 import styles from "./styles.module.scss";
-import Code from 'next/image';
-import { Dispatch, FC, SetStateAction, useEffect, useRef } from 'react';
+import { AiFillCodepenCircle } from 'react-icons/ai';
+import { useRef } from 'react';
 import WhoAmI from "../Article";
 import ProjectsList from "../Projects";
 import AboutPage from "../AboutPage";
 import Contact from "../Contact";
 
-type HeaderProps = {
-  isHeaderFixed: boolean;
-  setIsHeaderFixed: Dispatch<SetStateAction<boolean>>;
-};
 
-const Header:FC<HeaderProps> = ({ isHeaderFixed, setIsHeaderFixed }) => {
- 
-  useEffect(() => {
-    window.addEventListener('scroll', handleScroll);
-
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
-  }, []);
-
-  const handleScroll = () => {
-    if (window.scrollY > 300) {
-      setIsHeaderFixed(true);
-    } else {
-      setIsHeaderFixed(false);
-    }
-  };
-  
+const Header = () => {
   const myRef = useRef<HTMLDivElement | null>(null);
   const projectsRef = useRef<HTMLDivElement | null>(null);
   const aboutRef = useRef<HTMLDivElement | null>(null);
@@ -41,16 +20,18 @@ const Header:FC<HeaderProps> = ({ isHeaderFixed, setIsHeaderFixed }) => {
   }
 
   return (
-  <header className={`${styles.root} ${isHeaderFixed ? styles.sticky : ''}`}>
+    <>
+  <header className={`${styles.root}`}>
 
   <div className={styles.header_container}>
     <div className={styles.header_name}>
       <div className={styles.logo}>
-        <Code
-          src='/assets/header/code.png' alt="code"
-          width={40} height={40}
+        <AiFillCodepenCircle
+          width={40} 
+          height={40}
         />
-        <div className={styles.logo_name}>
+        <div 
+          className={`${styles.logo_name}`}>
           <h3>Artur Baghdanyan</h3>
           <p>Front End developer</p>
         </div>
@@ -64,19 +45,14 @@ const Header:FC<HeaderProps> = ({ isHeaderFixed, setIsHeaderFixed }) => {
     </div>
     <WhoAmI />
   </div>
-  <div className="flex flex-col mt-24 relative">
+  <div className={styles.root_components}>
     <div ref={aboutRef}><AboutPage /></div>
     <div ref={projectsRef}><ProjectsList /></div>
     <div ref={contactRef}><Contact /></div>
   </div>
-
-    {/* <nav className={styles.header_contact}>
-      <Link href='/'>Home</Link>
-      <Link href='/AboutPage'>About</Link>
-      <Link href='/Projects'>Projects</Link>
-      <Link href='/Contact'>Contact</Link>
-    </nav> */}
 </header>
+</>
+
 );
 }
 export default Header;
