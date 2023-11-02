@@ -1,8 +1,5 @@
-.root {
-  @apply text-[#E6E6FA] inset-x-0 z-20 px-4 absolute;
-
-  .header_container {
-    @apply flex flex-col;
+.header_container {
+    @apply flex flex-col text-[#E6E6FA] inset-x-0 z-20 px-4 absolute;
     
   .header_name {
     @apply flex items-center justify-between;
@@ -35,7 +32,7 @@
   }
   }
 }
+
 .root_components {
-  @apply flex flex-col mt-16 relative cursor-pointer md:mt-32;
-}
+  @apply flex flex-col mt-32 md:mt-[248px] cursor-pointer;
 }

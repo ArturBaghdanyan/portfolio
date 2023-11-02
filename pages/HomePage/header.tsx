@@ -20,9 +20,6 @@ const Header = () => {
   }
 
   return (
-    <>
-  <header className={`${styles.root}`}>
-
   <div className={styles.header_container}>
     <div className={styles.header_name}>
       <div className={styles.logo}>
@@ -44,15 +41,12 @@ const Header = () => {
       </ul>
     </div>
     <WhoAmI />
+    <div className={styles.root_components}>
+      <div ref={aboutRef}><AboutPage /></div>
+      <div ref={projectsRef}><ProjectsList /></div>
+      <div ref={contactRef}><Contact /></div>
+    </div> 
   </div>
-  <div className={styles.root_components}>
-    <div ref={aboutRef}><AboutPage /></div>
-    <div ref={projectsRef}><ProjectsList /></div>
-    <div ref={contactRef}><Contact /></div>
-  </div>
-</header>
-</>
-
 );
 }
 export default Header;
