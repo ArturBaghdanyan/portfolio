@@ -7,7 +7,7 @@ import AboutPage from "../AboutPage";
 import Contact from "../Contact";
 
 
-const Header = () => {
+const HomePage = () => {
   const myRef = useRef<HTMLDivElement | null>(null);
   const projectsRef = useRef<HTMLDivElement | null>(null);
   const aboutRef = useRef<HTMLDivElement | null>(null);
@@ -49,4 +49,4 @@ const Header = () => {
   </div>
 );
 }
-export default Header;
+export default HomePage;

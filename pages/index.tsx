@@ -1,8 +1,7 @@
-import Header from "./HomePage/header";
+import HomePage from "../components/HomePage/homePage";
 import bgImage from '../public/backgroundImage.jpg';
 
 export default function Home() {
-
 
   const divStyle = {
     backgroundImage: `url(${bgImage.src})`,
@@ -12,12 +11,11 @@ export default function Home() {
   };
 
   return (
-    
     <div className="flex flex-col h-screen">
       <div 
         className="bg-center bg-no-repeat bg-fixed bg-cover px-6" 
         style={divStyle}>
-        <Header />
+        <HomePage />
       </div>
     </div>
   )
