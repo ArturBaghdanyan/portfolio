@@ -6,7 +6,7 @@ export const PropertyProject = () => {
   return (
 		<div className={styles.information}>
 			<h1 className='text-2xl'>Property Fraud</h1>
-			<div className='border-l-2'>
+			<div className='border-l-2 ml-2'>
 				<p className={styles.information_text}>
 					Collaborated with a team of developers to create a property-fraud
 					application using React with TypeScript and Tailwind CSS.

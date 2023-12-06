@@ -4,7 +4,7 @@ export const projectsList = [
     {
         id: uuidv4(),
         key: 'property',
-        text: 'Property Fraud'
+        title: 'Property Fraud',
     },
     {
         id: uuidv4(),

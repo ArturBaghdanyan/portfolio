@@ -6,7 +6,7 @@ export const BinanceProject = () => {
   return (
 	<div className={styles.information}>
 		<h1 className='text-2xl'>Binance</h1>
-		<div className='border-l-2'>
+		<div className='border-l-2 ml-2'>
 			<p className={styles.information_text}>
 				I designed and developed a responsive web page using HTML, CSS, SCSS,
 				Tailwind Css and React JS. 

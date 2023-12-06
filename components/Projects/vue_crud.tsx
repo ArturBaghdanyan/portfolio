@@ -6,7 +6,7 @@ export const VueCrudProject = () => {
   return (
 		<div className={styles.information}>
 			<h1 className='text-2xl'>Vue_Crud</h1>
-			<div className='border-l-2'>
+			<div className='border-l-2 ml-2'>
 				<p className={styles.information_text}>
 					I designed and developed a CRUD (Create, Read, Update, Delete) 
 					application using Vue 3. This project demonstrates my proficiency 
@@ -15,7 +15,7 @@ export const VueCrudProject = () => {
 					showcasing my skills in managing state, routing, and building 
 					interactive user interfaces.
 				</p>
-				<Link href='https://github.com/ArturBaghdanyan/N-K-task' target='_blank'>
+				<Link href='https://github.com/ArturBaghdanyan/Vue_Crud' target='_blank'>
 					View Site
 				</Link>
 			</div>

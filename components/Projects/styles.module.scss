@@ -1,27 +1,27 @@
-.container {
-  @apply w-3/4 h-auto flex flex-col justify-center m-auto mt-10 mb-10 gap-y-3 
-	       text-justify sm:flex-row md:w-5/6; 
+.mySwiper {
+  @apply w-3/4 h-auto flex flex-col justify-center m-auto mt-10 mb-10 
+	       text-justify md:w-5/6; 
 
-	.projects {
-		@apply w-full flex justify-between;
+  .information {
+    @apply w-11/12 h-auto flex flex-col justify-center gap-y-4 items-start;
 
-		.projects_list {
-			@apply w-full h-auto items-start;
-
-			.projects_list_names {
-				@apply w-36 flex flex-col pl-3 pt-2 items-start mt-4 gap-y-4 
-							 border-t-2 border-l-2 xl:items-start;
-			}
-		}
+    .information_text {
+      @apply flex text-gray-400 pl-4;
+    }
+    a {
+      @apply mt-6 ml-4 border-b-2;
+    }
 	}
-		.information {
-			@apply w-full h-auto flex flex-col justify-center gap-y-4 items-start;
+  .click {
+    @apply flex justify-end file:rounded gap-x-3;
 
-			.information_text {
-				@apply flex text-gray-400 pl-4;
-			}
-			a {
-				@apply mt-6 ml-4 border-b-2;
-			}
-		}
-	}
+    > button {
+      @apply bg-[#7c3aed];
+
+      > svg {
+        @apply w-5 h-5;
+      }
+
+    }
+  }
+}

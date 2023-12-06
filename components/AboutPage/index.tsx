@@ -3,7 +3,7 @@ import style from "./styles.module.scss";
 const About = () => {
   return (
     <div className={style.about}>
-      <h2>ABOUT</h2>
+      <h2 className='text-[#22d3ee]'>ABOUT ME`</h2>
       <div className={style.texture}>
         <p>
           I&apos;m a passionate&nbsp;  

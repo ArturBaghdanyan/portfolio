@@ -6,7 +6,7 @@ export const TrelloProject = () => {
   return (
 		<div className={styles.information}>
 			<h1 className='text-2xl'>Trello</h1>
-			<div className='border-l-2'>
+			<div className='border-l-2 ml-2'>
 				<p className={styles.information_text}>
 				A web-based task management application inspired by Trello, built using 
 				React.js. This project showcases various React concepts and best practices,
