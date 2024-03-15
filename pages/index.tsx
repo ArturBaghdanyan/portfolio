@@ -13,7 +13,7 @@ export default function Home() {
   return (
     <div className="flex flex-col h-screen">
       <div 
-        className="bg-center bg-no-repeat bg-fixed bg-cover px-6" 
+        className="bg-center bg-no-repeat bg-fixed bg-cover px-10" 
         style={divStyle}>
         <HomePage />
       </div>

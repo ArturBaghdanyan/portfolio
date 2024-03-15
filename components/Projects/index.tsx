@@ -1,7 +1,7 @@
 import styles from './styles.module.scss';
 import { PropertyProject } from "./property";
 import { TrelloProject } from './trello';
-import { BinanceProject } from './binance';
+import { GarantProject } from './garant';
 import { VueCrudProject } from './vue_crud';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
@@ -17,7 +17,7 @@ const ProjectsList = () => {
     >
       <SwiperSlide><PropertyProject /></SwiperSlide>
       <SwiperSlide><TrelloProject /></SwiperSlide>
-      <SwiperSlide><BinanceProject /></SwiperSlide>
+      <SwiperSlide><GarantProject /></SwiperSlide>
       <SwiperSlide><VueCrudProject /></SwiperSlide> 
       <SwiperButtons />
     </Swiper>

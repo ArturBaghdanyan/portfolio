@@ -1,12 +1,12 @@
 .mySwiper {
-  @apply w-3/4 h-auto flex flex-col justify-center m-auto mt-10 mb-10 
-	       text-justify md:w-5/6; 
+  @apply w-full h-auto flex flex-col justify-center m-auto mt-10 mb-10 
+	       text-justify; 
 
   .information {
     @apply w-11/12 h-auto flex flex-col justify-center gap-y-4 items-start;
 
     .information_text {
-      @apply flex text-gray-400 pl-4;
+      @apply flex text-[#FF5722] pl-4 font-mono;
     }
     a {
       @apply mt-6 ml-4 border-b-2;
@@ -16,7 +16,7 @@
     @apply flex justify-end file:rounded gap-x-3;
 
     > button {
-      @apply bg-[#7c3aed];
+      @apply bg-[#FF5722];
 
       > svg {
         @apply w-5 h-5;
