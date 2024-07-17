@@ -1,19 +1,18 @@
 .mySwiper {
-  @apply w-full h-auto flex flex-col justify-center m-auto mt-10 mb-10 
-	       text-justify; 
+  @apply w-full h-auto flex flex-col justify-center mx-auto my-10 text-justify; 
 
   .information {
-    @apply w-11/12 h-auto flex flex-col justify-center gap-y-4 items-start;
+    @apply w-11/12 h-auto flex flex-col justify-center gap-y-0.5 items-start;
 
     .information_text {
-      @apply flex text-[#FF5722] pl-4 font-mono;
+      @apply flex text-[#12de29] pl-4 font-mono;
     }
     a {
       @apply mt-6 ml-4 border-b-2;
     }
 	}
   .click {
-    @apply flex justify-end file:rounded gap-x-3;
+    @apply flex justify-end file:rounded gap-x-3 mt-5;
 
     > button {
       @apply bg-[#FF5722];

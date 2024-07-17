@@ -1,7 +1,7 @@
 .row {
-	@apply w-full h-auto flex flex-col justify-center items-center mt-20 text-xl 
-	       lg:text-2xl text-[#eab308];
+	@apply w-full max-w-2xl mx-auto h-auto mt-20;
+
 	p {
-		@apply flex items-center;
+		@apply text-center text-[#eab308] text-lg;
 	}
 }

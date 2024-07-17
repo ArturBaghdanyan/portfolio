@@ -5,8 +5,10 @@ const WhoAmI = () => {
 
   return (
     <div className={styles.row}>
-      <h1>HI! I am ARTUR</h1>
-      <p>Front End developer</p>
+      <p>
+        I’m a dedicated Front-End developer with a passion for creating visually appealing and user-friendly websites. With a proven
+        track record, I excel in crafting stunning and functional user interfaces.
+      </p>
     </div>
   )
 }
