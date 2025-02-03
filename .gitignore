@@ -6,7 +6,6 @@
 /postcss.config.js
 /tailwind.config.js
 /.eslintignore
-/.gitignore
 /.pnp
 .pnp.js
 
