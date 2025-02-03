@@ -1,0 +1,19 @@
+.skills {
+  @apply my-8;
+
+  &_column {
+    @apply w-full mx-auto flex flex-wrap gap-x-14 mt-8 gap-y-8 justify-center;
+
+    &_language {
+      @apply w-[90px] h-auto flex flex-col items-center text-center gap-y-3;
+
+      &_icon {
+        @apply w-14 h-14 text-[#16a7d3];
+      }
+
+      > span {
+        @apply text-[#e3e0e0] font-mono;
+      }
+    }
+  }
+}

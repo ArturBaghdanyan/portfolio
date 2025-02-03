@@ -1,0 +1,50 @@
+.title {
+  @apply text-lg text-[#e0e0e0] font-bold h-auto w-[20%] relative
+           flex items-center justify-center mx-auto uppercase overflow-hidden;
+}
+.title::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -150%;
+  width: 200%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(247, 255, 5, 0.945),
+    transparent
+  );
+  animation: swipe 3s linear infinite;
+  overflow: hidden;
+}
+
+@keyframes swipe {
+  0% {
+    left: -150%;
+  }
+  50% {
+    left: 50%;
+  }
+  100% {
+    left: 150%;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .title {
+    @apply w-[40%] text-xl;
+  }
+}
+a {
+  color: white !important;
+}
+.container-spacing {
+  padding: 0 4rem;
+}
+
+@media only screen and (max-width: 992px) {
+  .container-spacing {
+    padding: 0 2rem !important;
+  }
+}

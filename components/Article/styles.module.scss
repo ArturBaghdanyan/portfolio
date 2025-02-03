@@ -1,0 +1,8 @@
+.row {
+  @apply w-full max-w-2xl mx-auto mt-12 h-auto;
+
+  p {
+    @apply text-center text-white border-none bg-[#2F4F4FFF]
+		p-3 text-lg rounded-lg;
+  }
+}

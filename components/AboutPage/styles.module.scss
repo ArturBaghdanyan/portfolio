@@ -1,0 +1,12 @@
+.about {
+  @apply bg-[#1f2937] w-full flex flex-col justify-center mx-auto gap-y-3 
+          text-justify;
+
+  > h2 {
+    @apply text-left;
+  }
+
+  > .texture > p {
+    @apply text-gray-300 mt-3;
+  }
+}
